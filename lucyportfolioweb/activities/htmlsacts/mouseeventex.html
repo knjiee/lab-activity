@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Activity</title>
+<style>
+    #myBox{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        text-align: center;
+        font-size: 13pt;
+        line-height: 200px;
+        margin: 50px auto;
+        border: 2px solid red;
+    }
+</style>
+</head>
+<body>
+    <div id="myBox">Hover or Click me!</div>
+
+<script>
+    var box = document.getElementById("myBox");
+
+    box.addEventListener("mouseover", function(){
+                box.style.backgroundColor = "orange";
+                box.style.innerHTML = "Mouse Over";
+            });
+
+    box.addEventListener("mouseout", function(){
+                box.style.backgroundColor="aqua";
+                box.innerHTML= "Hover or Click me!";
+            });
+
+    box.addEventListener("click", function(){
+                box.style.backgroundColor="green";
+                box.innerHTML= "Click";
+            });
+            
+    box.addEventListener("dblclick", function(){
+                box.style.backgroundColor="yellow";
+                box.innerHTML= "Double Click";
+            });
+
+
+</script>
+</body>
+</html>

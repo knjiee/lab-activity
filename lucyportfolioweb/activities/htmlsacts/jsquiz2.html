@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Javascript Quizz</title>
+</head>
+<body>
+    <h1>Simple Quiz Javascript</h1>
+    <p id="questions">Display your question here</p>
+    <button id="optionA" onclick="">Option A</button><br>
+    <button id="optionB" onclick="">Option B</button><br>
+    <button id="optionC" onclick="">Option C</button><br>
+    <button id="optionD" onclick="">Option D</button><br>
+
+    <button id="next-btn" onclick="">Next Question</button><br>
+    <button id="restart-btn" onclick="">Restart Quiz</button><br>
+</body>
+
+<script>
+     const quiz = [
+        {
+          question: "What is a variable in JavaScript?",
+          options: [
+            "A container for storing data values",
+            "A function that returns a value",
+            "A type of loop",
+            "An HTML element",
+          ],
+          correct: "A",
+        },
+        {
+          question:
+            "Which of the following is a valid way to declare a function in JavaScript?",
+          options: [
+            "function myFunction()",
+            "var myFunction = function()",
+            "const myFunction = () => {}",
+            "All of the above",
+          ],
+          correct: "D",
+        },
+        {
+          question: "What does DOM stand for?",
+          options: [
+            "Document Object Model",
+            "Data Object Model",
+            "Dynamic Object Management",
+            "Document Orientation Model",
+          ],
+          correct: "A",
+        },
+        {
+          question:
+            "Which method is used to add an element at the end of an array?",
+          options: ["push()", "pop()", "unshift()", "shift()"],
+          correct: "A",
+        },
+        {
+          question:
+            "What is the purpose of the 'typeof' operator in JavaScript?",
+          options: [
+            "To check if a variable is defined",
+            "To determine the type of a variable",
+            "To compare two variables",
+            "To assign a type to a variable",
+          ],
+          correct: "B",
+        },
+      ];
+
+        let quizPos = 0;
+
+        function loadQuestion(){
+            document.getElementById("question").innerHTML = quiz[quizPos].question;
+            document.getElementById("optionA").innerHTML = quiz[quizPos].question[0];
+            document.getElementById("optionB").innerHTML = quiz[quizPos].question[1];
+            document.getElementById("optionC").innerHTML = quiz[quizPos].question[2];
+            document.getElementById("optionD").innerHTML = quiz[quizPos].question[3];
+        }
+
+        loadQuestion();
+</script>
+</html>

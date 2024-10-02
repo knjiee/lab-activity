@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const quiz = [
+            {
+                question: "A container for storing data values",
+                answer: "VARIABLES"
+            },
+            {
+                question: "What does DOM stand for?",
+                answer: "DOCUMENT OBJECT MODEL"
+            },
+            {
+                question: "Defined as a sequence of letters, digits, punctuation and so on.",
+                answer: "STRING"
+            },
+            {
+                question: "a collection of data",
+                answer: "ARRAY"
+            },
+            {
+                question: "used if you want to make sure information comes through the user.",
+                answer: "ALERT BOX"
+            }
+        ];
+        var score = 0;
+        const totalQuest = quiz.length;
+        for (var i=0; i<totalQuest;i++){
+            var userAnswer = prompt(quiz[i].question);
+            if (userAnswer.toUpperCase() === quiz[i].answer){
+                alert ("Correct Answer!");
+                score++;
+            }
+            else {
+                alert ("Wrong!! The correct answer was " + quiz[i].answer);
+            }
+        }
+        alert ("You finished the quiz! Your score is " + score + " out of " + totalQuest + " .");
+    </script>
+    
+</body>
+</html>
